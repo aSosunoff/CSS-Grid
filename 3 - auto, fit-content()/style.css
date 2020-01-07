@@ -1,0 +1,31 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+
+body{
+    background-color: #472665;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.wrapper{
+    display: grid;
+    /* grid-template-columns: auto auto; */
+    /* grid-template-columns: auto auto 1fr; */
+    grid-template-columns: auto fit-content(250px);
+
+    max-width: 1170px;
+    margin: 50px auto;
+    border: 5px solid #8545bf;
+    font-size: 20px;
+    color: aliceblue;
+    text-align: center;
+}
+
+.item{
+    border: 1px solid #be76ff;
+    padding: 10px 0;
+}
