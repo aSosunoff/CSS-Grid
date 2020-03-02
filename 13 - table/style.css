@@ -12,6 +12,8 @@ body {
 
 .grid-table,
 .grid-table__col,
+.grid-table__head,
+.grid-table__filter,
 .grid-table__pagging {
 	display: grid;
 	gap: 2px;
@@ -22,21 +24,23 @@ body {
 	width: 760px;
 }
 
-.grid-table__col {
+.grid-table__col,
+.grid-table__head,
+.grid-table__filter {
 	grid-template-columns: repeat(auto-fit, minmax(0px, 1fr));
 }
 
-.grid-table__filter-element {
+.grid-table__filter .grid-table__element {
 	text-align: center;
+	border: none;
+	padding: 0;
 }
-.grid-table__filter-element input {
+.grid-table__filter .grid-table__element input {
 	width: 100%;
 	padding: 5px;
 }
 
 .grid-table__element,
-.grid-table__head-element,
-.grid-table__pagging-element,
 .grid-table__pagging-element-prev,
 .grid-table__pagging-element-next {
 	border: 1px solid #a0a0a0;
@@ -52,25 +56,23 @@ body {
 
 .grid-table__pagging-element-prev,
 .grid-table__pagging-element-next,
-.grid-table__pagging-element,
-.grid-table__filter-element,
-.grid-table__element,
-.grid-table__head-element {
+.grid-table__pagging .grid-table__element,
+.grid-table__element{
 	display: grid;
 	align-items: center;
 }
 
-.grid-table__head-element {
+.grid-table__head .grid-table__element {
 	transition: all 0.2s ease-in;
 	cursor: pointer;
 	background-color: #57a6ff;
 }
-.grid-table__head-element:hover {
+.grid-table__head .grid-table__element:hover {
 	background-color: #ffffff;
 	box-shadow: 5px 5px 8px 0px #c1c1c1;
 }
 
-.grid-table__pagging-element,
+.grid-table__pagging .grid-table__element,
 .grid-table__pagging-element-next,
 .grid-table__pagging-element-prev,
 .grid-table__pagging-element_active {
@@ -81,7 +83,7 @@ body {
 	text-align: center;
 }
 
-.grid-table__pagging-element:hover,
+.grid-table__pagging .grid-table__element:hover,
 .grid-table__pagging-element-next:hover,
 .grid-table__pagging-element-prev:hover {
 	background-color: #57a6ff;
