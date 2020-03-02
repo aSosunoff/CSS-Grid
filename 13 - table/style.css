@@ -12,6 +12,7 @@ body {
 
 .grid-table,
 .grid-table__col,
+.grid-table__body,
 .grid-table__head,
 .grid-table__filter,
 .grid-table__pagging {
